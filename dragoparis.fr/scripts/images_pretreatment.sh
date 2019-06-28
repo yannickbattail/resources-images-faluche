@@ -43,8 +43,8 @@ mkdir -p $DEST_DIR
 for IMG in $SRC_DIR/*.jpg
 do
     BASE=`basename $IMG .jpg`
-    magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
-    #magick convert "$IMG" -fuzz 2% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    #magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 2% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
     echo "$BASE.png"
 done
 
@@ -68,7 +68,7 @@ for IMG in $SRC_DIR/*.jpg
 do
     BASE=`basename $IMG .jpg`
     #magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
-    magick convert "$IMG" -fuzz 2% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 1% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
     echo "$BASE.png"
 done
 
