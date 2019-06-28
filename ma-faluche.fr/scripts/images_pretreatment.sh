@@ -8,43 +8,31 @@ for IMG in $SRC_DIR/*.jpg
 do
     BASE=`basename $IMG .jpg`
     #magick convert "$IMG" -fuzz 2% -transparent white -trim "$DEST_DIR/$BASE.png"
-    magick convert "$IMG" -fuzz 2% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 10% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -draw 'color 78,78 floodfill' -trim "$DEST_DIR/$BASE.png"
     echo "$BASE.png"
 done
 
-SRC_DIR=../originaux/lettres
-DEST_DIR=../png/lettres
-echo "====== $SRC_DIR ======"
-mkdir -p $DEST_DIR
-for IMG in $SRC_DIR/*.jpg
-do
-    BASE=`basename $IMG .jpg`
-    magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
-    #magick convert "$IMG" -fuzz 2% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
-    echo "$BASE.png"
-done
-
-SRC_DIR=../originaux/chiffres
-DEST_DIR=../png/chiffres
-echo "====== $SRC_DIR ======"
-mkdir -p $DEST_DIR
-for IMG in $SRC_DIR/*.jpg
-do
-    BASE=`basename $IMG .jpg`
-    magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
-    #magick convert "$IMG" -fuzz 2% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
-    echo "$BASE.png"
-done
-
-SRC_DIR=../originaux/broche
-DEST_DIR=../png/broche
+SRC_DIR=../originaux/broches
+DEST_DIR=../png/broches
 echo "====== $SRC_DIR ======"
 mkdir -p $DEST_DIR
 for IMG in $SRC_DIR/*.jpg
 do
     BASE=`basename $IMG .jpg`
     #magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
-    magick convert "$IMG" -fuzz 2% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 5% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    echo "$BASE.png"
+done
+
+SRC_DIR=../originaux/drapeaux
+DEST_DIR=../png/drapeaux
+echo "====== $SRC_DIR ======"
+mkdir -p $DEST_DIR
+for IMG in $SRC_DIR/*.jpg
+do
+    BASE=`basename $IMG .jpg`
+    magick convert "$IMG" -fuzz 10% -transparent white -trim "$DEST_DIR/$BASE.png"
+    #magick convert "$IMG" -fuzz 10% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
     echo "$BASE.png"
 done
 
@@ -55,7 +43,7 @@ mkdir -p $DEST_DIR
 for IMG in $SRC_DIR/*.jpg
 do
     BASE=`basename $IMG .jpg`
-    magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 15% -transparent white -trim "$DEST_DIR/$BASE.png"
     #magick convert "$IMG" -fuzz 2% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
     echo "$BASE.png"
 done
@@ -68,7 +56,7 @@ for IMG in $SRC_DIR/*.jpg
 do
     BASE=`basename $IMG .jpg`
     #magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
-    magick convert "$IMG" -fuzz 1% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 10% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
     echo "$BASE.png"
 done
 
@@ -80,6 +68,30 @@ for IMG in $SRC_DIR/*.jpg
 do
     BASE=`basename $IMG .jpg`
     #magick convert "$IMG" -fuzz 5% -transparent white -trim "$DEST_DIR/$BASE.png"
-    magick convert "$IMG" -fuzz 1% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 4% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    echo "$BASE.png"
+done
+
+SRC_DIR=../originaux/x
+DEST_DIR=../png/x
+echo "====== $SRC_DIR ======"
+mkdir -p $DEST_DIR
+for IMG in $SRC_DIR/*.jpg
+do
+    BASE=`basename $IMG .jpg`
+    #magick convert "$IMG" -fuzz 2% -transparent white -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 15% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
+    echo "$BASE.png"
+done
+
+SRC_DIR=../originaux/zodiac
+DEST_DIR=../png/zodiac
+echo "====== $SRC_DIR ======"
+mkdir -p $DEST_DIR
+for IMG in $SRC_DIR/*.jpg
+do
+    BASE=`basename $IMG .jpg`
+    #magick convert "$IMG" -fuzz 15% -transparent white -trim "$DEST_DIR/$BASE.png"
+    magick convert "$IMG" -fuzz 10% -fill "rgba(0,0,0,0)" -draw 'color 0,0 floodfill' -trim "$DEST_DIR/$BASE.png"
     echo "$BASE.png"
 done
